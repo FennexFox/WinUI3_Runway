@@ -1,0 +1,53 @@
+name: Investigation
+description: Track a hypothesis, unclear symptom, or evidence-gathering task.
+title: "[Investigation] "
+labels: ["investigation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form when the next step is to learn, compare options, or
+        settle a design or behavior question before implementation.
+        Typical examples are threshold rules, UI/Core ownership, test
+        gaps, or ambiguous expected behavior.
+  - type: input
+    id: question
+    attributes:
+      label: Core question
+      placeholder: What exactly are we trying to verify?
+    validations:
+      required: true
+  - type: textarea
+    id: current-evidence
+    attributes:
+      label: Current context or evidence
+      description: What code, behavior, or discussion makes this worth investigating?
+    validations:
+      required: true
+  - type: textarea
+    id: counterpoints
+    attributes:
+      label: Counterpoints or competing options
+  - type: textarea
+    id: next-steps
+    attributes:
+      label: Next steps
+      placeholder: |
+        - define the expected calculation rule
+        - add a focused test case
+        - compare Core and UI ownership options
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - core-calculation
+        - ui
+        - app-shell
+        - testing
+        - docs
+        - repo-meta
+    validations:
+      required: true

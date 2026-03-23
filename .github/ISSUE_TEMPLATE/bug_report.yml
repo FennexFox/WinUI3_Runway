@@ -1,0 +1,73 @@
+name: Bug report
+description: Report a reproducible app bug or incorrect runway behavior.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for confirmed or at least reproducible problems.
+        If the main goal is to decide what is true before implementing a
+        fix, use the Investigation form instead.
+  - type: input
+    id: build
+    attributes:
+      label: Build, branch, or commit
+      placeholder: e.g. local develop build, commit abc1234
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: e.g. Windows 11, unpackaged local run
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What is happening, and why is it wrong?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Launch the app
+        2. Enter Personal and Business values
+        3. Trigger the calculation
+        4. Observe the incorrect output or UI behavior
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshots, logs, or evidence
+      description: Paste output, attach screenshots, or link related tests if available.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - core-calculation
+        - ui
+        - app-shell
+        - testing
+        - docs
+        - repo-meta
+    validations:
+      required: true

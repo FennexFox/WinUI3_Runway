@@ -1,0 +1,49 @@
+name: Release checklist
+description: Prepare and verify an app release.
+title: "[Release] "
+labels: ["release"]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Target version
+      placeholder: e.g. v0.2.0
+    validations:
+      required: true
+  - type: textarea
+    id: changes
+    attributes:
+      label: Included changes
+      description: Summarize the user-facing changes.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Validation evidence
+      description: Summarize the tests, manual checks, or screenshots that justify the release.
+      placeholder: |
+        - unit tests:
+          - `Runway.Tests` updated and passing
+        - manual app check:
+          - launch app and confirm input -> result flow
+        - docs:
+          - README or workflow docs updated if behavior changed
+    validations:
+      required: true
+  - type: textarea
+    id: risks
+    attributes:
+      label: Known risks or follow-ups
+      description: Call out what is still rough, incomplete, or intentionally deferred.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: README or workflow docs reviewed
+        - label: Core calculation tests updated and passing
+        - label: Manual UI smoke check completed
+        - label: Build or package verification completed
+        - label: Tag/version confirmed
+        - label: Release notes reviewed
