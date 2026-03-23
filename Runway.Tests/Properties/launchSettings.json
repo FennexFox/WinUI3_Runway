@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Runway.Tests (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Runway.Tests (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
