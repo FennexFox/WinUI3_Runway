@@ -4,10 +4,16 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="WinUI3_Runway/WinUI3_Runway.csproj">
+  <Project Path="Runway.App/Runway.App.csproj">
     <Platform Solution="*|ARM64" Project="ARM64" />
     <Platform Solution="*|x64" Project="x64" />
     <Platform Solution="*|x86" Project="x86" />
     <Deploy />
+  </Project>
+  <Project Path="Runway.Core/Runway.Core.csproj">
+    <Build Solution="Debug|*" Project="false" />
+  </Project>
+  <Project Path="Runway.Tests/Runway.Tests.csproj" Id="1224c096-e527-49f7-a675-ef018932d506">
+    <Build Solution="Debug|*" Project="false" />
   </Project>
 </Solution>

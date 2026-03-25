@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Runway.Core
 {
-    internal class WorkspaceSnapshot
+    public class WorkspaceSnapshot
     {
+        public WorkspaceKind Workspace { get; set; }
+        public double RemainingPercent { get; set; }
+        public DateTime CapturedAt { get; set; }
+        public DateTime ResetAt { get; set; }
     }
 }

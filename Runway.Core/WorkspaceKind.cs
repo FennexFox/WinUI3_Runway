@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Runway.Core
 {
-    internal class WorkspaceKind
+    public enum WorkspaceKind
     {
+        Personal,
+        Business
     }
 }

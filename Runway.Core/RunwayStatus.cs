@@ -9,7 +9,11 @@ using System.Threading.Tasks;
 
 namespace Runway.Core
 {
-    public partial class Class1
+    public enum RunwayStatus
     {
+        Unknown,
+        Safe,
+        Warning,
+        Critical
     }
 }
